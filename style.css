@@ -7,3 +7,10 @@ body {
 button, input {
     font-size: large;
 }
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40em;
+  }

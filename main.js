@@ -9,6 +9,9 @@
 'use strict';
 
 /*** Event Listeners ***/
+
+document.getElementById("swap_pic").addEventListener("click", swap);
+
 document.getElementById("d6").addEventListener("click", roll_d6);
 
 document.getElementById("d8").addEventListener("click", roll_d8);
@@ -20,12 +23,32 @@ document.getElementById("d6").addEventListener("mouseleave", d6_leave);
 document.getElementById("enter").addEventListener("click", greeting);
 
 /*** Functions ***/
+
+// CLICKABLE PICTURE
+
+let switch_pic = 1
+
+function swap() {
+
+    if (switch_pic == 1) {
+        document.getElementById("swap_pic").src = "./images/war_cat.webp";
+        switch_pic = 2
+    } else if (switch_pic == 2) {
+        document.getElementById("swap_pic").src = "./images/both_cat.jpp";
+        switch_pic = 1
+    } else {
+        document.getElementById("swap_pic").src = "./images/both_cat.jpg";
+        switch_pic = 3
+    }
+
+}
+
+
 function roll_d6() {
 
     let roll = randInt(1, 6);
 
     document.getElementById("die_roll").textContent = roll;
-
 }
 
 
